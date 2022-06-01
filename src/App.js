@@ -7,7 +7,7 @@ function App() {
   const [users, setUsers] = useState([]);
   const [info, setInfo] = useState({});
 
-  let url = "https://randomuser.me/api/?results=3&page=1";
+  let url = "https://randomuser.me/api/?results=3&seed=foobar&page=1";
 
   const fetchUsers = (url) => {
     fetch(url)
@@ -20,13 +20,13 @@ function App() {
   };
 
   const onPrevious = () => {
-    url = "https://randomuser.me/api/?results=3&page=";
+    url = "https://randomuser.me/api/?results=3&seed=foobar&page=";
     const prevPage = info.page - 1;
     fetchUsers(url + prevPage);
   };
 
   const onNext = () => {
-    url = "https://randomuser.me/api/?results=3&page=";
+    url = "https://randomuser.me/api/?results=3&seed=foobar&page=";
     const nextPage = info.page + 1;
     fetchUsers(url + nextPage);
   };

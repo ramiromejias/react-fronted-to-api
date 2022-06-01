@@ -15,16 +15,6 @@ const Users = ({ users = [] }) => {
               <strong>Age:</strong> {item.dob.age}
               <br />
               <strong>Country:</strong> {item.location.country}
-              <br />
-              <div style={{ textAlign: "right" }}>
-                <a
-                  href="#"
-                  className="link-primary"
-                  style={{ textDecoration: "none" }}
-                >
-                  [more]
-                </a>
-              </div>
             </div>
           </div>
         </div>
